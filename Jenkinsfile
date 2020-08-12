@@ -18,7 +18,7 @@ pipeline{
                 		echo "Multiline shell steps works too"
                 		ls -lah
                         
-                    s3Upload(file:'index.html', bucket:'jenkinslakshmibhargaviproject', path:'path/to/target/file.txt')
+                    s3Upload(file:'index.html', bucket:'jenkinslakshmibhargaviproject', path:'C:\Users\teja1\Documents\GitHub\static\index.html')
               	'''
                      
               }
