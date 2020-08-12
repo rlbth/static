@@ -11,7 +11,7 @@ pipeline{
              steps {
                   sh 'echo "Hello World from AWS"'
               	
-                  withAWS([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AKIAYV4HSDSJD7AAI7EG', region:'us-east-2', credentialsID:'blueocean', secretKeyVariable: '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']]) {
+                  withAWS([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', region:'us-east-2', credentialsID:'blueocean', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
                   sh '''
                         mkdir -p ~/.aws
                         echo "[default]" >~/.aws/credentials
