@@ -5,15 +5,15 @@ pipeline{
              steps {
                   sh 'echo "Hello World from AWS"'
               	
-                  withAWS([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', region:'us-east-2', credentialsID:'blueocean', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
+                  withAWS([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AKIAYV4HSDSJD7AAI7EG', region:'us-east-2', credentialsID:'blueocean', secretKeyVariable: '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']]) {
                   sh '''
                         mkdir -p ~/.aws
                         echo "[default]" >~/.aws/credentials
                         echo "[default]" >~/.boto
-                        echo "aws_access_key_id = ${AWS_ACCESS_KEY_ID}" >>~/.boto
-                        echo "aws_secret_access_key = ${AWS_SECRET_ACCESS_KEY}">>/.boto
-                        echo "aws_access_key_id = ${AWS_ACCESS_KEY_ID}" >>~/.aws/credentials
-                        echo "aws_secret_access_key = ${AWS_SECRET_ACCESS_KEY}">>/.aws/credentials
+                        echo "aws_access_key_id = ${AKIAYV4HSDSJD7AAI7EG}" >>~/.boto
+                        echo "aws_secret_access_key = ${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}">>/.boto
+                        echo "aws_access_key_id = ${AKIAYV4HSDSJD7AAI7EG}" >>~/.aws/credentials
+                        echo "aws_secret_access_key = ${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}">>/.aws/credentials
                   
                 		echo "Multiline shell steps works too"
                 		ls -lah
