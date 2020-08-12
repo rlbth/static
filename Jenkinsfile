@@ -18,9 +18,9 @@ pipeline {
         
          stage('Upload to AWS') {
               steps {
-                   withAWS(region: 'us-east-2', credentials: 'devopsroot') {
+                   withAWS(region: 'us-east-2', credentials: 'AKIAYV4HSDSJD7AAI7EG') {
                         sh 'echo "Uploading content with AWS creds"'
-                        s3Upload(pathStyleAccessEnabled:true, bucket:'jenkinslakshmibhargaviproject')
+                        s3Upload(pathStyleAccessEnabled: true, bucket: 'jenkinslakshmibhargaviproject')
                   }
               }
          }
