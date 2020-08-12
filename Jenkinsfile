@@ -3,7 +3,7 @@ pipeline{
       stages{
             stage ('Lint HTML'){
                   steps {
-                        //do linting
+                        tidy -q -e *.html
                   }     
             }
                   
