@@ -3,7 +3,7 @@ pipeline{
       stages{
             stage ('Lint HTML'){
                   steps {
-                        sh 'echo "linting"
+                        //do linting
                   }     
             }
                   
